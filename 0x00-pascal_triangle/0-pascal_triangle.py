@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Demo of Pascal's triangle"""
+
+
 def pascal_triangle(n):
     triangle = []
 
