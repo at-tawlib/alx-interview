@@ -3,6 +3,9 @@
 
 
 def pascal_triangle(n):
+    """
+    returns a list of Pasca's triangle based on n
+    """
     triangle = []
 
     if n <= 0:
