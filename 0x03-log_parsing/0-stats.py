@@ -40,4 +40,4 @@ finally:
     print('File size: {}'.format(total_file_size))
     for key, value in sorted(status_dict.items()):
         if value != 0:
-            print(f"{key}: {value}")
+            print('{}: {}'.format(key, value))
