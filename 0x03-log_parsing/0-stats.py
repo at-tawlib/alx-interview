@@ -34,9 +34,11 @@ try:
                     print('{}: {}'.format(key, value))
             count = 0  # reset count
 
-except KeyboardInterrupt:
+except Exception as err:
+    pass
+
+finally:
     print('File size: {}'.format(total_file_size))
     for key, value in sorted(status_dict.items()):
         if value != 0:
             print('{}: {}'.format(key, value))
-    raise
