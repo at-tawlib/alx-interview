@@ -6,7 +6,7 @@ Log parsing
 
 import sys
 
-count = 1
+count = 0
 total_file_size = 0
 status_dict = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
                '404': 0, '405': 0, '500': 0}
@@ -24,6 +24,7 @@ try:
         if status_code in status_dict.keys():
             status_dict[status_code] += 1
 
+        count += 1
         # increase total file size
         total_file_size += file_size
         if count == 10:
@@ -32,7 +33,6 @@ try:
                 if value != 0:
                     print('{}: {}'.format(key, value))
             count = 0  # reset count
-        count += 1
 except Exception as err:
     pass
 
