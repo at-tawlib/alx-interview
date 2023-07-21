@@ -12,8 +12,11 @@ status_dict = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
 try:
     for line in sys.stdin:
         line = line.rstrip()
-        status_code = line.split()[7]
-        file_size = int(line.split()[8])
+        line_split = line.split(" ")
+
+        if len(line_split) > 4:
+            status_code = line_split[7]
+            file_size = int(line_split[8])
 
         # look for status code in dict and increment it
         if status_code in status_dict.keys():
