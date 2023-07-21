@@ -2,6 +2,8 @@
 """
 Log parsing
 """
+
+
 import sys
 
 count = 1
@@ -25,7 +27,7 @@ try:
         # increase total file size
         total_file_size += file_size
         if count == 10:
-            print(f'File size: {total_file_size}')
+            print('File size: {}'.format(total_file_size))
             for key, value in sorted(status_dict.items()):
                 if value != 0:
                     print(f"{key}: {value}")
@@ -35,7 +37,7 @@ except Exception as err:
     pass
 
 finally:
-    print(f'File size: {total_file_size}')
-    for key, value in sorted(status_dict.items):
+    print('File size: {}'.format(total_file_size))
+    for key, value in sorted(status_dict.items()):
         if value != 0:
             print(f"{key}: {value}")
