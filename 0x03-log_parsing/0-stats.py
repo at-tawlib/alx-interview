@@ -17,8 +17,8 @@ try:
         line_split = line.split(" ")
 
         if len(line_split) > 4:
-            status_code = line_split[7]
-            file_size = int(line_split[8])
+            status_code = line_split[-2]
+            file_size = int(line_split[-1])
 
         # look for status code in dict and increment it
         if status_code in status_dict.keys():
